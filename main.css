@@ -6,3 +6,13 @@ td,tr, table {
 input{
   font-size: 16px;
 }
+#aTitle{
+  color: rgb(40,40,40);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+#logoImg{
+  height: 30px;
+}

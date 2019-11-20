@@ -11,12 +11,7 @@ if($openedTask){
   </script>';
   die();
 }
-if($taskName === '') {
-  echo '<script>
-    alert("Your task gotta have a name...");
-  </script>';
-  die();
-}
+
 $qr = 'insert into tasks 
 (id, userId, startTime, task, project) 
 values (default, ?, ?, ?, ?)';

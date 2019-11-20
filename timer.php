@@ -14,7 +14,6 @@ if(isset($_GET['action'])){
   $action = false;
 }
 
-
 $userId = $_COOKIE['id@timer'];
 $qr = 'select distinct(task) from tasks where userId = ?';
 $values = [$userId];
@@ -104,7 +103,7 @@ if(!$openedTask){ //if dont have opened tasks, start or continue a task
         <td>'.$timesWorking.'</td>
         <td>'.$totalTimeH.'h '.$totalTimeM.'Mins '.$totalTimeS.'Secs</td>
         <td>
-          <form method="post" action="index.php?action=startTask">
+          <form method="post" action="?action=startTask">
             <input type="hidden" name="taskName" value="'.$eachTask['task'].'" />
             <input type="hidden" name="project" value="'.$eachTask['project'].'" />
             <input type="submit" value="continue" />
@@ -199,6 +198,7 @@ if(!$openedTask){ //if dont have opened tasks, start or continue a task
         </tr>
       </tbody></table>';
     }
+
     if($action === 'editTask') {
       $taskId = $_GET['id'];
 
@@ -258,6 +258,7 @@ if(!$openedTask){ //if dont have opened tasks, start or continue a task
       </br>
     ';
   } 
+  
   echo '
     <span>Started Time: '.$shownedStartTime.'</span>
     </br>
