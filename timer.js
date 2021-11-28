@@ -67,7 +67,7 @@ function stopTask(taskId, stopTime, shownedStopTime) {
   document.getElementById('divDescription').style.display = 'inline';
   document.getElementById('stopBut').style.display = 'none';
   document.getElementById('choosingStopTime').style.display = 'none';
-  fetch(`https://brenogo.tech/timer/stopTask.php?id=${taskId}&stoptime=${stopTime}`)
+  fetch(`http://brenogo.com/timer/stopTask.php?id=${taskId}&stoptime=${stopTime}`)
     .then(resp => resp.json())
     .then(resp => {
       console.log(resp);
@@ -80,7 +80,7 @@ function stopTask(taskId, stopTime, shownedStopTime) {
 
 function sendDesc(taskId) {
   const description = document.getElementById('description').value;
-  fetch('https://brenogo.tech/timer/addDesc.php',
+  fetch('http://brenogo.com/timer/addDesc.php',
   {
     method: 'POST',
     headers: {

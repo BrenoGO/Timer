@@ -4,7 +4,7 @@ require '../../config/connection.php';
 require '../../phpFunctions/functionsPDO.php';
 
 $json = file_get_contents('php://input');
-	
+
 $obj = json_decode($json,true);
 $description = $obj['description'];
 $taskId = $obj['taskId'];
